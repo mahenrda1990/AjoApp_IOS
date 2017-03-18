@@ -1,0 +1,6 @@
+framework module Pods_AjoApp {
+  umbrella header "Pods-AjoApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

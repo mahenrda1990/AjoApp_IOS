@@ -1,0 +1,15 @@
+PODS:
+  - CryptoSwift (0.6.7)
+  - RNCryptor (5.0.1)
+
+DEPENDENCIES:
+  - CryptoSwift
+  - RNCryptor (~> 5.0)
+
+SPEC CHECKSUMS:
+  CryptoSwift: 685ae257941e5447474348a2b545583e1a16b573
+  RNCryptor: 2e352a488779d1a9184ab629be22a7c5bc84acb5
+
+PODFILE CHECKSUM: a50ff3c13f574982952439e6da6214689d3e095f
+
+COCOAPODS: 1.1.1
