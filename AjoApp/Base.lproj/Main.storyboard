@@ -1438,7 +1438,7 @@ Reset password: You can change your password from here.</string>
                                     <action selector="ActionOnback:" destination="ETs-zn-wrI" eventType="touchUpInside" id="6fV-KF-EdN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8c-aw-K4S">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8c-aw-K4S">
                                 <rect key="frame" x="80" y="86" width="250" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="hpF-0R-TYZ"/>
@@ -3963,7 +3963,7 @@ Reset password: You can change your password from here.</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outline-blank" translatesAutoresizingMaskIntoConstraints="NO" id="bjS-JT-kLH">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outline-blank" translatesAutoresizingMaskIntoConstraints="NO" id="bjS-JT-kLH">
                                         <rect key="frame" x="274" y="363" width="26" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="26" id="FcL-Wb-3cP"/>
@@ -3990,7 +3990,7 @@ Reset password: You can change your password from here.</string>
                                             <action selector="ActionOnNext:" destination="Ncl-7v-GOc" eventType="touchUpInside" id="82s-fb-LqP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bn-p9-1AW">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bn-p9-1AW">
                                         <rect key="frame" x="270" y="362" width="97" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="97" id="O6i-bG-rXb"/>

@@ -130,9 +130,10 @@ class MyTrascationViewController: UIViewController {
                                 self.MyTranscationTableView .reloadData()
                                 
                             }else{
-                                let Alert:UIAlertView = UIAlertView(title: "Alert", message: "NO date Found", delegate: self, cancelButtonTitle: "Ok")
+                                self.MyTranscation_Arr .removeAllObjects()
                                 self.NOdataLabel.isHidden = false
-                                //Alert.show()
+                                self.MyTranscationTableView .reloadData()
+                                
                                 MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
                             }
                             
@@ -145,8 +146,7 @@ class MyTrascationViewController: UIViewController {
                     // handle json...
                 }else{
                     DispatchQueue.main.async(execute: {
-                        let Alert:UIAlertView = UIAlertView(title: "Alert", message: "Login failed. Incorrect password", delegate: self, cancelButtonTitle: "Ok")
-                        Alert.show()
+                        
                         MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
                     })
                     

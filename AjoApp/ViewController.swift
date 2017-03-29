@@ -20,7 +20,7 @@ class ViewController: UIViewController,UIScrollViewDelegate  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        images = ["mmmm.png","m12.png","m13.png"]
+        images = ["m1-1.png","m12.png","m13.png"]
         //Show all images
         for index in 0..<images.count {
             let xOrigin: CGFloat = (CGFloat)(index) * self.view.frame.size.width

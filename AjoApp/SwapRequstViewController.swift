@@ -178,7 +178,22 @@ class SwapRequstViewController: UIViewController {
                                     
                                     var payment_termaddstr = ""
                                     let payment_termadd = json["payment_term"] as? NSString as String?
-                                    payment_termaddstr = payment_termaddstr + payment_termadd!;                                self.Paymentterms.text = payment_termaddstr
+                                    
+                                    if payment_termadd == "monthly"{
+                                        payment_termaddstr = payment_termaddstr + "Monthly";                                self.Paymentterms.text = payment_termaddstr
+                                        
+                                    } else if payment_termadd == "weekly" {
+                                       payment_termaddstr = payment_termaddstr + "Weekly";                                self.Paymentterms.text = payment_termaddstr
+                                        
+                                    }else if payment_termadd == "daily" {
+                                        payment_termaddstr = payment_termaddstr + "Daily";                                self.Paymentterms.text = payment_termaddstr
+                                    }else {
+                                       payment_termaddstr = payment_termaddstr + "Bi-Weekly";                                self.Paymentterms.text = payment_termaddstr
+                                    }
+                                    
+                                    
+                                    
+                                    
                                     let currency = json["currency"] as? NSString as String?
                                     
                                     let Gamount = (json["group_amount"] as AnyObject).int32Value;

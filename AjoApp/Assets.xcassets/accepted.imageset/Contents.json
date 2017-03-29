@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "invite_accepted.png",
+      "filename" : "accepted.png",
       "scale" : "1x"
     },
     {

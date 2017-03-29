@@ -9,61 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AjoApp/ChatClasses/ChatViewController.swift"
-            timestampString = "511275689.085488"
+            filePath = "AjoApp/LoginViewController.swift"
+            timestampString = "512371582.646943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "updateCounting()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AjoApp.ChatViewController.updateCounting () -&gt; ()"
-                  moduleName = "AjoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mindcrewtechnologies/Documents/AjoAppNew/AjoApp/AjoApp/ChatClasses/ChatViewController.swift"
-                  timestampString = "511362494.901764"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AjoApp.ChatViewController.(updateCounting () -&gt; ()).(closure #1)"
-                  moduleName = "AjoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mindcrewtechnologies/Documents/AjoAppNew/AjoApp/AjoApp/ChatClasses/ChatViewController.swift"
-                  timestampString = "511362494.904012"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AjoApp/MemberDetilsViewController.swift"
-            timestampString = "511278530.391628"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "MemberdetilsService()"
+            startingLineNumber = "291"
+            endingLineNumber = "291"
+            landmarkName = "NotificatinService()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AjoApp/AppDelegate.swift"
-            timestampString = "511279199.543249"
+            timestampString = "512312109.909201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "application(_:didReceiveRemoteNotification:)"
+            startingLineNumber = "313"
+            endingLineNumber = "313"
+            landmarkName = "applicationDidEnterBackground(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AjoApp/AboutusViewController.swift"
-            timestampString = "511349968.759794"
+            filePath = "AjoApp/AppDelegate.swift"
+            timestampString = "512312109.909201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "ActionOnShare(_:)"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
+            landmarkName = "applicationWillEnterForeground(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AjoApp/AboutusViewController.swift"
-            timestampString = "511349860.87697"
+            filePath = "AjoApp/AppDelegate.swift"
+            timestampString = "512312579.931446"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "ActionOnShare(_:)"
+            startingLineNumber = "323"
+            endingLineNumber = "323"
+            landmarkName = "applicationDidBecomeActive(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,76 +73,94 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AjoApp/SignupViewController.swift"
-            timestampString = "511355921.764439"
+            filePath = "AjoApp/AppDelegate.swift"
+            timestampString = "512312579.931446"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "SignupViewController"
-            landmarkType = "3">
+            startingLineNumber = "331"
+            endingLineNumber = "331"
+            landmarkName = "applicationWillTerminate(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AjoApp/AppDelegate.swift"
+            timestampString = "512312579.931446"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "347"
+            endingLineNumber = "347"
+            landmarkName = "NotificatinService()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AjoApp/AppDelegate.swift"
+            timestampString = "512312579.931446"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "389"
+            endingLineNumber = "389"
+            landmarkName = "NotificatinService()"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "AjoApp.SignupViewController.phoneNumber.getter : __ObjC.NSString"
+                  symbolName = "AjoApp.AppDelegate.(NotificatinService () -&gt; ()).(closure #1).(closure #1)"
                   moduleName = "AjoApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mindcrewtechnologies/Documents/AjoAppNew/AjoApp/AjoApp/SignupViewController.swift"
-                  timestampString = "511362494.926376"
+                  urlString = "file:///Users/mindcrewtechnologies/Documents/AjoAppNew/AjoApp/AjoApp/AppDelegate.swift"
+                  timestampString = "512312649.886181"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "48">
+                  startingLineNumber = "389"
+                  endingLineNumber = "389"
+                  offsetFromSymbolStart = "312">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "AjoApp.SignupViewController.phoneNumber.setter : __ObjC.NSString"
+                  symbolName = "AjoApp.AppDelegate.(NotificatinService () -&gt; ()).(closure #1).(closure #1)"
                   moduleName = "AjoApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mindcrewtechnologies/Documents/AjoAppNew/AjoApp/AjoApp/SignupViewController.swift"
-                  timestampString = "511362494.928447"
+                  urlString = "file:///Users/mindcrewtechnologies/Documents/AjoAppNew/AjoApp/AjoApp/AppDelegate.swift"
+                  timestampString = "512312649.888144"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AjoApp.SignupViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; AjoApp.SignupViewController"
-                  moduleName = "AjoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mindcrewtechnologies/Documents/AjoAppNew/AjoApp/AjoApp/SignupViewController.swift"
-                  timestampString = "511362494.930366"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "464">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AjoApp.SignupViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;AjoApp.SignupViewController&gt;"
-                  moduleName = "AjoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mindcrewtechnologies/Documents/AjoAppNew/AjoApp/AjoApp/SignupViewController.swift"
-                  timestampString = "511362494.932265"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "400">
+                  startingLineNumber = "389"
+                  endingLineNumber = "389"
+                  offsetFromSymbolStart = "852">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AjoApp/AppDelegate.swift"
+            timestampString = "512312579.931446"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "352"
+            endingLineNumber = "352"
+            landmarkName = "NotificatinService()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

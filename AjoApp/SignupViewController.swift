@@ -83,6 +83,9 @@ class SignupViewController: UIViewController {
     
     
     @IBAction func ActionOnterms(_ sender: Any) {
+        Firstname_txt.resignFirstResponder();
+        Password_Txt.resignFirstResponder();
+        Email_txt.resignFirstResponder();
         self.TermsView.isHidden = false
         self.BacgroundView.isHidden = false
     }
@@ -241,6 +244,7 @@ class SignupViewController: UIViewController {
                     DispatchQueue.main.async(execute: {
                         if (json as? NSDictionary) != nil{
                             var status = json["status"] as? NSString
+                            var message = json["message"] as? NSString
                             if (status?.isEqual(to: "success"))! {
                                 
                                 let loginid = (json["loginid"] as AnyObject).int32Value;
@@ -273,7 +277,8 @@ class SignupViewController: UIViewController {
                                self.NotificatinService()
                                 
                             }else{
-                                let Alert:UIAlertView = UIAlertView(title: "Alert", message: "Email Id already registered!", delegate: self, cancelButtonTitle: "Ok")
+                                
+                                let Alert:UIAlertView = UIAlertView(title: "Alert", message: message as String?, delegate: self, cancelButtonTitle: "Ok")
                                 Alert.show()
                                 MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
                             }
@@ -287,6 +292,8 @@ class SignupViewController: UIViewController {
                     // handle json...
                 }else{
                     DispatchQueue.main.async(execute: {
+                        //var status = json["status"] as? NSString
+
                         let Alert:UIAlertView = UIAlertView(title: "Alert", message: "Email Id already registered!", delegate: self, cancelButtonTitle: "Ok")
                         Alert.show()
                         MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
@@ -320,7 +327,10 @@ class SignupViewController: UIViewController {
             }else{
                 //let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
                 // loadingNotification?.labelText = "Please wait"
-                let  deviceToken = (UserDefaults.standard.object(forKey: "deviceToken")as? NSString)!
+                var  deviceToken = ""
+                if (UserDefaults.standard.object(forKey: "deviceToken") != nil) {
+                    deviceToken = (UserDefaults.standard.object(forKey: "deviceToken")as? NSString)! as String
+                }
                 let token = "Mind$17QWpvYXBwOk1pbmRDcmV3OkFuZHJvaWQ6TWFyb29m"
                 
                 let Dictonary: NSMutableDictionary = NSMutableDictionary()

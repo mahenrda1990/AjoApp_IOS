@@ -114,6 +114,7 @@ class InboxViewController: UIViewController {
                     DispatchQueue.main.async(execute: {
                         if (json as? NSDictionary) != nil{
                             MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
+                            self.Inbox_Arr .removeAllObjects()
                             var status = json["status"] as? NSString
                             if (status?.isEqual(to: "success"))! {
                                 self.NODataFound.isHidden = true
@@ -135,6 +136,8 @@ class InboxViewController: UIViewController {
                             }else{
                                 let Alert:UIAlertView = UIAlertView(title: "Alert", message: "NO date Found", delegate: self, cancelButtonTitle: "Ok")
                                self.NODataFound.isHidden = false
+                                self.Inbox_Arr .removeAllObjects()
+                                self.Inboxtableview .reloadData()
                                 //Alert.show()
                                 MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
                             }

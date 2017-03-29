@@ -345,10 +345,26 @@ class GroupDetailsViewController: UIViewController,UICollectionViewDelegate,UICo
         
         // let  final_amount = DetailsDictionary["final_amount"]
        
-        let  payment_term = DetailsDictionary["payment_term"] as! String
-        var final_amountheding = "Payment term : "
-        final_amountheding = final_amountheding + " \(payment_term)"
-        self.PaymentTermslbl.text = final_amountheding as String
+        var  payment_term = DetailsDictionary["payment_term"] as! String
+        if payment_term == "monthly"{
+            var final_amountheding = "Payment term : "
+            final_amountheding = final_amountheding + "Monthly"
+            self.PaymentTermslbl.text = final_amountheding as String
+
+        } else if payment_term == "weekly" {
+            var final_amountheding = "Payment term : "
+            final_amountheding = final_amountheding + "Weekly"
+            self.PaymentTermslbl.text = final_amountheding as String
+        }else if payment_term == "daily" {
+            var final_amountheding = "Payment term : "
+            final_amountheding = final_amountheding + "Daily"
+            self.PaymentTermslbl.text = final_amountheding as String
+        }else {
+            var final_amountheding = "Payment term : "
+            final_amountheding = final_amountheding + "Bi-Weekly"
+            self.PaymentTermslbl.text = final_amountheding as String
+        }
+       
         
         
     }
@@ -486,7 +502,7 @@ class GroupDetailsViewController: UIViewController,UICollectionViewDelegate,UICo
         let  payout_turn = dic .object(forKey: "payout_turn") as! NSString as String
         cell.myLabel.text = payout_turn as NSString as String
         cell.dateLabel.text = plan_start_date as NSString as String
-    return cell
+       return cell
             
         }
     

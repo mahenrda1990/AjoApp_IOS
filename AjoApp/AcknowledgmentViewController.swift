@@ -117,19 +117,13 @@ class AcknowledgmentViewController: UIViewController {
                                 self.NOdataLabl.isHidden = true
                                 
                                 self.Aqunolgemnt_Arr = (json["groups"] as? NSMutableArray)!;
-                                // self.Inbox_Arr.reversed()
-//                                for item in newarr.reversed() {
-//                                    print("Found \(item)")
-//                                    self.Aqunolgemnt_Arr.add(item)
-//                                }
-                                
-                                
                                 self.AquknowlagementTableView .reloadData()
                                 
                             }else{
-                                let Alert:UIAlertView = UIAlertView(title: "Alert", message: "NO date Found", delegate: self, cancelButtonTitle: "Ok")
+                                
                                 self.NOdataLabl.isHidden = false
-                                //Alert.show()
+                                self.Aqunolgemnt_Arr .removeAllObjects()
+                                self.AquknowlagementTableView .reloadData()
                                 MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
                             }
                             

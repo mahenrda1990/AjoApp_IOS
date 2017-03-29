@@ -150,9 +150,24 @@ class RequestDetilsViewController: UIViewController {
                                 let group_namee = try! group_name?.aesDecrypt(key: self.key, iv: self.iv)
                                 self.NameLble.text = group_namee! as String
 
-                                var payment_termaddstr = "Payment term : "
                                 let payment_termadd = json["payment_term"] as? NSString as String?
-                                payment_termaddstr = payment_termaddstr + payment_termadd!;                                self.Paymentterms.text = payment_termaddstr
+                                if payment_termadd == "monthly"{
+                                    var payment_termaddstr = "Payment term : "
+                                    payment_termaddstr = payment_termaddstr + "Monthly";                               self.Paymentterms.text = payment_termaddstr
+                                    
+                                } else if payment_termadd == "weekly" {
+                                    var payment_termaddstr = "Payment term : "
+                                    payment_termaddstr = payment_termaddstr + "Weekly";                               self.Paymentterms.text = payment_termaddstr
+                                    
+                                }else if payment_termadd == "daily" {
+                                    var payment_termaddstr = "Payment term : "
+                                    payment_termaddstr = payment_termaddstr + "Daily";                               self.Paymentterms.text = payment_termaddstr
+                                }else {
+                                    var payment_termaddstr = "Payment term : "
+                                    payment_termaddstr = payment_termaddstr + "Bi-Weekly";                               self.Paymentterms.text = payment_termaddstr
+                                }
+
+                                
                                 let currency = json["currency"] as? NSString as String?
                                
                                 let Gamount = (json["group_amount"] as AnyObject).int32Value;
@@ -411,8 +426,7 @@ class RequestDetilsViewController: UIViewController {
                                 self.navigationController?.pushViewController(LoginView, animated: true)
                                 
                             }else{
-                                let Alert:UIAlertView = UIAlertView(title: "Alert", message: "NO date Found", delegate: self, cancelButtonTitle: "Ok")
-                                Alert.show()
+                              
                                 MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
                             }
                             
@@ -425,8 +439,7 @@ class RequestDetilsViewController: UIViewController {
                     // handle json...
                 }else{
                     DispatchQueue.main.async(execute: {
-                        let Alert:UIAlertView = UIAlertView(title: "Alert", message: "Login failed. Incorrect password", delegate: self, cancelButtonTitle: "Ok")
-                        Alert.show()
+                        
                         MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
                     })
                     

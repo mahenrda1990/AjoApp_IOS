@@ -318,6 +318,14 @@ class ChatViewController: UIViewController,UITableViewDataSource,UITableViewDele
                     }
                     
                     do {
+                        
+                        //change by manisha
+                        var lastChat : NSDictionary!
+                        let lastCount = self.currentMessages.count
+                        if lastCount > 0{
+                            lastChat = self.currentMessages[lastCount-1] as! NSDictionary
+                        }
+                        //ended by manisha
                         //create json object from data
                         if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
                             print(json)
@@ -372,6 +380,22 @@ class ChatViewController: UIViewController,UITableViewDataSource,UITableViewDele
                                             self.chatTable.scrollToRow(at: indexpath, at: UITableViewScrollPosition.bottom, animated: true)
                                         }
                                        
+                                        //change by manisha
+                                        
+                                        if lastCount < self.currentMessages.count{
+                                            self.chatTable.reloadData()
+                                        }else if lastChat != nil{
+                                            
+                                            let oldArr = lastChat["messages"] as! NSArray
+                                            
+                                            let NewArr = (self.currentMessages[lastCount-1] as! NSDictionary) ["messages"] as! NSArray
+                                            if oldArr.count != NewArr.count {
+                                                self.chatTable.reloadData()
+                                            }
+                                            
+                                        }
+                                        
+                                        //ended by manisha
                                     }else{
                                         let Alert:UIAlertView = UIAlertView(title: "Alert", message: "NO date Found", delegate: self, cancelButtonTitle: "Ok")
                                         //Alert.show()

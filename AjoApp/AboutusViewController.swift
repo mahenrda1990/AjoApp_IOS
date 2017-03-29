@@ -29,10 +29,10 @@ class AboutusViewController: UIViewController,CAPSPageMenuDelegate,UIPopoverPres
         if UIDevice.current.userInterfaceIdiom == .pad {
             
         let message = "Downlode Ajo App"
-        let link = NSURL(string: "http://yoururl.com")
+        let link = NSURL(string: "https://itunes.apple.com/us/app/ajoapp/id1216975001?ls=1&mt=8")
         let objectsToShare = [message,link!] as [Any]
         let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-        activityVC.title = "Share One"
+        activityVC.title = ""
         activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList]
         
         activityVC.popoverPresentationController?.sourceView = self.view
@@ -42,7 +42,7 @@ class AboutusViewController: UIViewController,CAPSPageMenuDelegate,UIPopoverPres
         }else{
             let message = "Downlode Ajo App"
             //Set the link to share.
-            if let link = NSURL(string: "http://yoururl.com")
+            if let link = NSURL(string: "https://itunes.apple.com/us/app/ajoapp/id1216975001?ls=1&mt=8")
             {
                 let objectsToShare = [message,link] as [Any]
                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)

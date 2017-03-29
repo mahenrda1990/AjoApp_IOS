@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import RNCryptor
 import CryptoSwift
+import RNCryptor
 extension Data {
     var hexDescription: String {
         return reduce("") {$0 + String(format: "%02x", $1)}
@@ -120,6 +120,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func ActionOntermsAndcondition(_ sender: Any) {
+        Mobile_no_txt.resignFirstResponder();
+        Password_txt.resignFirstResponder();
         self.termsview.isHidden = false
         self.BagroundView.isHidden = false
     }
@@ -282,8 +284,11 @@ class LoginViewController: UIViewController {
                 var alert = UIAlertView(title: "Please check network connection.", message: nil, delegate: nil, cancelButtonTitle: "OK")
                 alert.show()
             }else{
-                
-                let  deviceToken = (UserDefaults.standard.object(forKey: "deviceToken")as? NSString)!
+                var  deviceToken = ""
+                if (UserDefaults.standard.object(forKey: "deviceToken") != nil) {
+                deviceToken = (UserDefaults.standard.object(forKey: "deviceToken")as? NSString)! as String
+                }
+               
                 let token = "Mind$17QWpvYXBwOk1pbmRDcmV3OkFuZHJvaWQ6TWFyb29m"
                 
                 let Dictonary: NSMutableDictionary = NSMutableDictionary()

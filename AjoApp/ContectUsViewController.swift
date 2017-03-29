@@ -179,6 +179,9 @@ class ContectUsViewController: UIViewController,UITextViewDelegate  {
                             MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
                             var status = json["status"] as? NSString
                             if (status?.isEqual(to: "success"))! {
+                                self.YourNametxt.text = ""
+                                self.NoteText.text = ""
+                                
                                 let Alert:UIAlertView = UIAlertView(title: "Alert", message: "Thanks for contacting Ajoapp support. We've received your message and will respond as soon as we can.", delegate: self, cancelButtonTitle: "Ok")
                                 Alert.show()
                                 

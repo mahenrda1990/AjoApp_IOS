@@ -220,25 +220,27 @@ class ContectListViewController: UIViewController,UITextFieldDelegate,UIImagePic
     
         var contectStrNew : NSString = (entry.phone as NSString?)!
         contectStrNew = CheckNumber(number: contectStrNew)
+        let mobile = (UserDefaults.standard.object(forKey: "mobile_no")as? NSString)! as String
+        let desmobile = try! mobile.aesDecrypt(key: key, iv: iv)
+        if desmobile == contectStrNew as String {
         
-        ContactListnumbers .add(contectStrNew)
-        
-        let contect = contectStrNew as String
-        let contectStr = try! contect.aesEncrypt(key: key, iv: iv)
-        ContactList .add(contectStr)
-        var Namestr = entry.name as String
-        let NamestrNew = try! Namestr.aesEncrypt(key: key, iv: iv)
+        }else{
+            ContactListnumbers .add(contectStrNew)
+            
+            let contect = contectStrNew as String
+            let contectStr = try! contect.aesEncrypt(key: key, iv: iv)
+            ContactList .add(contectStr)
+            var Namestr = entry.name as String
+            let NamestrNew = try! Namestr.aesEncrypt(key: key, iv: iv)
+            
+            print(NamestrNew)
+            
+            NameList .add(NamestrNew)
+            print(ContactList.count)
+            print(ContactList)
 
-        print(NamestrNew)
+        }
         
-        NameList .add(NamestrNew)
-        
-        
-        
-
-        print(ContactList.count)
-        print(ContactList)
-   
 
     }
     
@@ -249,24 +251,28 @@ class ContectListViewController: UIViewController,UITextFieldDelegate,UIImagePic
         
         var contectStrNew : NSString = (entry.phone as NSString?)!
         contectStrNew = CheckNumber(number: contectStrNew)
+        let mobile = (UserDefaults.standard.object(forKey: "mobile_no")as? NSString)! as String
+        let desmobile = try! mobile.aesDecrypt(key: key, iv: iv)
+        if desmobile == contectStrNew as String {
+            
+        }else{
+            ContactListnumbers .remove(contectStrNew)
+            
+            let cnstr = contectStrNew as String
+            let contectSt = try! cnstr.aesEncrypt(key: key, iv: iv)
+            
+            ContactList .remove(contectSt)
+            var NamestrNew = entry.name as String
+            let NamestrNewSt = try! NamestrNew.aesEncrypt(key: key, iv: iv)
+            
+            
+            NameList .remove(NamestrNewSt)
+            print(ContactList.count)
+            print(ContactList)
+        }
         
-        ContactListnumbers .remove(contectStrNew)
-        
-        let cnstr = contectStrNew as String
-        let contectSt = try! cnstr.aesEncrypt(key: key, iv: iv)
-        
-        ContactList .remove(contectSt)
-        var NamestrNew = entry.name as String
-        let NamestrNewSt = try! NamestrNew.aesEncrypt(key: key, iv: iv)
         
         
-        NameList .remove(NamestrNewSt)
-        
-        
-        
-        
-        print(ContactList.count)
-        print(ContactList)
 
     }
     
@@ -370,7 +376,8 @@ class ContectListViewController: UIViewController,UITextFieldDelegate,UIImagePic
                             if (status?.isEqual(to: "success"))! {
                                 if (MFMessageComposeViewController.canSendText()) {
                                     let controller = MFMessageComposeViewController()
-                                    controller.body = "Message Body"
+                                    //controller.body = "https://itunes.apple.com/us/app/ajoapp/id1216975001?ls=1&mt=8"
+                                     controller.body = "Hello Downlode Ajo App https://itunes.apple.com/us/app/ajoapp/id1216975001?ls=1&mt=8 here to go to Ajo App! "
                 
                                     controller.recipients = self.ContactListnumbers as NSArray as? [String]
                                     controller.messageComposeDelegate = self
@@ -415,6 +422,8 @@ class ContectListViewController: UIViewController,UITextFieldDelegate,UIImagePic
         if ContactList.count > 0{
              AddInvitaionService()
             
+        } else {
+        
         }
        
         

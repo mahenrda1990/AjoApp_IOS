@@ -53,17 +53,17 @@ class InviteViewController: UIViewController {
         
         let  isaccepted = GroupDic .object(forKey: "isaccepted") as! NSString as String
         if isaccepted == "accepted"{
-            let imageName = "invite_accepted"
+            let imageName = "accepted"
             let image = UIImage(named: imageName)
             cell.SetImage?.image = image
 
         
         }else if isaccepted == "cancel" {
-            let imageName = "invite_denied"
+            let imageName = "denied"
             let image = UIImage(named: imageName)
             cell.SetImage?.image = image
         }else {
-            let imageName = "invite_not_accepted"
+            let imageName = "invited"
             let image = UIImage(named: imageName)
             cell.SetImage?.image = image
 

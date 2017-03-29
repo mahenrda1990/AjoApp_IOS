@@ -766,7 +766,7 @@
 					73706EF41E5EF4C5001BFFCB = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7SAMCX2KLT;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -1102,8 +1102,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mindcrewtech.Ajoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "83ad8830-9222-48cb-8ac6-06a2c015f6a1";
-				PROVISIONING_PROFILE_SPECIFIER = AjoAppDevelopment;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/mindcrewtechnologies/Documents/AjoAppNew/AjoApp/AjoApp/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1115,7 +1115,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AjoApp/AjoApp.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7SAMCX2KLT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1126,8 +1126,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mindcrewtech.Ajoapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f7700194-59a5-4bec-a0ad-2bc22e01b49f";
-				PROVISIONING_PROFILE_SPECIFIER = AjoAppliveByMahendra17March;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/mindcrewtechnologies/Documents/AjoAppNew/AjoApp/AjoApp/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

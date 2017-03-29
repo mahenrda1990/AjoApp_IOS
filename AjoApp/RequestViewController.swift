@@ -108,6 +108,7 @@ class RequestViewController: UIViewController {
                     print(json)
                     DispatchQueue.main.async(execute: {
                         if (json as? NSDictionary) != nil{
+                            self.Requsest_Arr.removeAllObjects()
                             MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
                             var status = json["status"] as? NSString
                             if (status?.isEqual(to: "success"))! {
@@ -124,9 +125,9 @@ class RequestViewController: UIViewController {
                                 self.RequestTableview .reloadData()
                                 
                             }else{
-                                let Alert:UIAlertView = UIAlertView(title: "Alert", message: "NO date Found", delegate: self, cancelButtonTitle: "Ok")
+                                self.Requsest_Arr.removeAllObjects()
                                 self.NOdataLabel.isHidden = false
-                                //Alert.show()
+                                self.RequestTableview .reloadData()
                                 MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
                             }
                             

@@ -309,10 +309,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        if UserDefaults.standard.string(forKey: "LOGIN") == "YES"{
-            NotificatinService()
-            
-        }
+
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
@@ -323,6 +320,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+                if UserDefaults.standard.string(forKey: "LOGIN") == "YES"{
+                    self.isurl = "https://ajoapp1.eu-gb.mybluemix.net/api/v1/webservices/insertdevicetoken"
+                    NotificatinService()
+        
+                }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
@@ -337,8 +339,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 var alert = UIAlertView(title: "Please check network connection.", message: nil, delegate: nil, cancelButtonTitle: "OK")
                 alert.show()
             }else{
-                //let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
-               // loadingNotification?.labelText = "Please wait"
+                LoginId = (UserDefaults.standard.object(forKey: "loginid")as? NSString)!
+                
                 let  deviceToken = (UserDefaults.standard.object(forKey: "deviceToken")as? NSString)!
                 let token = "Mind$17QWpvYXBwOk1pbmRDcmV3OkFuZHJvaWQ6TWFyb29m"
                 
